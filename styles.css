@@ -58,6 +58,10 @@ img {
   border-radius: 100px;
 }
 
+img:hover {
+  transform: scale(0.8);
+}
+
 form {
   display: flex;
   flex-direction: column;
@@ -135,6 +139,23 @@ footer {
 }
 
 
+.my-element {
+  display: inline-block;
+  margin: 0 0.5rem;
 
+  animation: bounce; /* referring directly to the animation's @keyframe declaration */
+  animation-duration: 3s; /* don't forget to set a duration! */
+}
 
+/* This only changes this particular animation duration */
+.animate__animated.animate__backInRight {
+  --animate-duration: 3s;
+}
 
+.animate__animated.animate__slideInLeft {
+  --animate-duration: 10s;
+}
+
+.animate__animated.animate__heartBeat {
+  --animate-duration: 5s;
+}
