@@ -55,3 +55,40 @@ document.addEventListener("DOMContentLoaded", function() {
   window.addEventListener('scroll', showElementsOnScroll);
   showElementsOnScroll(); // Запускаем функцию при загрузке страницы
 });
+
+
+var textScaleDelay = 0.1;
+
+document.querySelectorAll('.textScale span').forEach((item) => {
+
+    textScaleDelay = textScaleDelay + 0.2
+
+    item.style.animationDelay = textScaleDelay + "s";
+
+
+});
+
+let words = [
+    "Лучшие направления",
+    "Лучшие направления",
+    "Лучшие направления",
+    "Лучшие направления"
+  ];
+  let colors = [
+    "black",
+    "red",
+    "green",
+    "blue"
+  ];
+  let currentWord = 0;
+  let intervalid = setInterval(()=>{
+    if (currentWord == words.length - 1)
+      currentWord = 0;
+    else
+      currentWord++;
+    let obj = document.getElementById("word");
+    obj.style.color = colors[currentWord];
+    obj.innerText = words[currentWord];
+  }, 5000);
+
+  
